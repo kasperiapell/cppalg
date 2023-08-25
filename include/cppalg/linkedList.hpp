@@ -14,7 +14,7 @@
 *
 */
 namespace linkedList {
-	bool hasCycleFloyd(Node *head) {
+	inline bool hasCycleFloyd(Node* head) {
 		if (head == nullptr) { return false; }
 
 		Node* slowPtr = head;
