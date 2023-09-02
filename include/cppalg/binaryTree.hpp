@@ -2,7 +2,7 @@
 
 namespace binaryTree {
 	inline void invertChildren(Node* root) {
-		if (!root) {
+		if (root) {
 			Node* tmep = root->left;
 			root->left = root->right;
 			root->right = temp;
