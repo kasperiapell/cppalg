@@ -4,7 +4,7 @@ namespace search {
 	#include <vector>
 
 	// return -1 if target not found in the vector
-	int binarySearch(std::vector<int>& vec, int target) {
+	inline int binarySearch(std::vector<int>& vec, int target) {
 		int bot = 0;
         	int mid;
         	int top = vec.size() - 1;
