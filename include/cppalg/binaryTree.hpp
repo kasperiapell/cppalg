@@ -49,6 +49,22 @@ namespace binaryTree {
 	        return out; 
 	}
 
-	inline void 
+	inline vector<int> preorderTraversal(Node* root) {
+		vector<int> out;
+	        if (root == nullptr) return out;
+	        stack<TreeNode*> stack;
+
+	        while (root != nullptr || !stack.empty()) {
+			while (root != nullptr) {
+		                out.push_back(root->val);
+		                stack.push(root);
+		                root = root->left;
+			}
+			root = stack.top();
+			stack.pop();
+			root = root->right;
+	        }
+	        return out;
+	} 
 
 }
