@@ -31,7 +31,7 @@ namespace binaryTree {
 		return root;
 	}
 
-	inline void inorderTraversal(Node* root) {
+	inline vector<int> inorderTraversal(Node* root) {
 		vector<int> out;
 	        if (!root) return out;
 	        stack<TreeNode*> stack;
@@ -48,5 +48,7 @@ namespace binaryTree {
 	        }
 	        return out; 
 	}
+
+	inline void 
 
 }
