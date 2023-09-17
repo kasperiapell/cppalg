@@ -4,9 +4,7 @@ namespace sort {
 	#include <cmath>
 	#include <vector>
 
-	using namespace std;
-
-	inline void insertionSort(vector<int> &vec)
+	inline void insertionSort(std::vector<int> &vec)
 	{
         	int i, j, x;
         	for (i = 1; i < vec.size(); i++) {
@@ -19,7 +17,7 @@ namespace sort {
         	}
 	}
 
-	inline void mergeArrays(vector<int> &vec, vector<int> &left, vector<int> &right)
+	inline void mergeArrays(std::vector<int> &vec, std::vector<int> &left, std::vector<int> &right)
 	{
         	int ptr = 0;
         	int qtr = 0;
@@ -35,7 +33,7 @@ namespace sort {
         	}
 	}
 
-	inline void mergeSort(vector<int> &vec)
+	inline void mergeSort(std::vector<int> &vec)
 	{
 	        if (vec.size() <= 10) {
 	                insertionSort(vec);
