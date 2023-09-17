@@ -7,12 +7,12 @@ namespace vect {
 		vector<vector<int>> out = {{}};
 
 	        for (int num: vec) {
-	            int n = out.size();
+			int n = out.size();
 
-	            for (int i = 0; i < n; i++) {
-	                out.push_back(out[i]);
-	                out.back().push_back(num);
-	            }
+			for (int i = 0; i < n; i++) {
+		  		out.push_back(out[i]);
+		  		out.back().push_back(num);
+			}
 	        }
 
         	return out;
