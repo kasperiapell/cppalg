@@ -3,7 +3,7 @@
 namespace vect {
 	#include <vector>
 
-	inline std::vector<std::vector<int>> PowerSet(std::vector<int>& vec) {
+	inline std::vector<std::vector<int>> powerSet(std::vector<int>& vec) {
 		vector<vector<int>> out = {{}};
 
 	        for (int num: vec) {
