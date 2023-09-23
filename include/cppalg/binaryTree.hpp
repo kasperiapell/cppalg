@@ -3,21 +3,22 @@
 namespace binaryTree {
 
 	/*
-	 * The functions operate on a binary tree formed from nodes of the form
 	 *
-	 * 	struct Node {
-	 * 		int val;
-	 *		Node* left;
-	 *		Node* right;
-	 * 	}
+	 * The functions operate on a binary tree consisting of nodes of the form
+	 *
+	 *	struct Node {
+	 *		int val;
+	 *		Node *left;
+	 *		Node *right;
+	 *	}
 	 *
 	 */
 
 	#include <stack>
 
-	inline void invertChildren(Node* root) {
+	inline void invertChildren(Node *root) {
 		if (root) {
-			Node* tmep = root->left;
+			Node *temp = root->left;
 			root->left = root->right;
 			root->right = temp;
 
@@ -26,12 +27,12 @@ namespace binaryTree {
 		}
 	}
 
-	inline Node* invert(Node* root) {
+	inline Node* invert(Node *root) {
 		invertChildren(root);
 		return root;
 	}
 
-	inline vector<int> inorderTraversal(Node* root) {
+	inline vector<int> inorderTraversal(Node *root) {
 		vector<int> out;
 	        if (!root) return out;
 	        stack<TreeNode*> stack;
@@ -46,10 +47,11 @@ namespace binaryTree {
 	            	out.push_back(root->val);
 	            	root = root->right;
 	        }
+
 	        return out; 
 	}
 
-	inline vector<int> preorderTraversal(Node* root) {
+	inline vector<int> preorderTraversal(Node *root) {
 		vector<int> out;
 	        if (root == nullptr) return out;
 	        stack<TreeNode*> stack;
@@ -64,6 +66,7 @@ namespace binaryTree {
 			stack.pop();
 			root = root->right;
 	        }
+
 	        return out;
 	} 
 

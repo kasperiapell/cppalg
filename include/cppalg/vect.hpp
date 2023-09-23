@@ -6,8 +6,7 @@ namespace vect {
 	
 	#define MAX_PERMUTATION_SIZE 10
 
-	inline std::vector<std::vector<int>> powerSet(std::vector<int>& vec)
-	{
+	inline std::vector<std::vector<int>> powerSet(std::vector<int>& vec) {
 		vector<vector<int>> out = {{}};
 
 	        for (int num: vec) {

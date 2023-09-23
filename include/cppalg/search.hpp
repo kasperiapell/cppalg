@@ -20,7 +20,8 @@ namespace search {
 	        	} else {
 	        		bot = mid + 1;
 	        	}
-	        }   
+	        } 
+
 	        return -1; 
 	}
 }
