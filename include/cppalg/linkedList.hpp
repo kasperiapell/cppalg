@@ -1,24 +1,24 @@
 // include/cppalg/linkedList.hpp
 
 namespace linkedList {
+
 	/*
 	 *
-	 * Floyd's cycle-finding algorithm
+	 * The following functions operate on linked list nodes of the form
 	 *
-	 * Operates on a linked list formed from nodes of the form
-	 *
-	 * 	struct Node {
+	 *	struct Node {
 	 *		int val;
-	 *		Node* next;
-	 *		Node(int x) : val(x), next(NULL) {}
-	 * 	};
+	 *		Node *next;
+	 *	}
 	 *
 	 */
-	inline bool hasCycle(Node* head) {
-		if (head == nullptr) { return false; }
 
-		Node* slowPtr = head;
-		Node* fastPtr = head;
+	 // Floyd's cycle-finding algorithm
+	inline bool hasCycle(Node* head) {
+		if (head == nullptr) return false;
+
+		Node *slowPtr = head;
+		Node *fastPtr = head;
 
 		while (slowPtr != nullptr && fastPtr != nullptr && fastPtr->next != nullptr) {
 			slowPtr = slowPtr->next;
@@ -28,6 +28,22 @@ namespace linkedList {
 				return true;
 			}
 		} 
+
 		return false;
+	}
+
+	inline void reverse(Node *head) {
+		Node *bot = nullptr;
+		Node *mid = head;
+		Node *top = nullptr;
+
+	        while (mid) {
+			top = mid->next;
+			mid->next = bot;
+			bot = mid;
+			mid = top;
+	        }
+
+	        return bot;
 	}
 }
