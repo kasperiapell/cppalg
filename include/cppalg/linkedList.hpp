@@ -14,7 +14,7 @@ namespace linkedList {
 	 */
 
 	 // Floyd's cycle-finding algorithm
-	inline bool hasCycle(Node* head) {
+	inline bool hasCycle(Node *head) {
 		if (head == nullptr) return false;
 
 		Node *slowPtr = head;
