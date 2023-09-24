@@ -33,8 +33,7 @@ namespace binaryTree {
 
 	        for (int i = 0; i < 32; i++) {
 			out = out << 1;
-			bool temp = n & 1;
-			out |= temp;
+			out |= (n & 1);
 			n = n >> 1;
 	        }
 
